@@ -1,5 +1,5 @@
 PRODUCT_SOONG_NAMESPACES += \
-    sony/extra
+    sony/extra/sagami
 
 # SonyFramework
  PRODUCT_COPY_FILES += \
