@@ -21,6 +21,9 @@ PRODUCT_SOONG_NAMESPACES += \
 # Motorola Dolby Atmos
     $(call inherit-product, vendor/sony/extra-sagami/extra/dolby/dolby.mk)
 
+# Sony DSEE-HX
+    $(call inherit-product, vendor/sony/extra-sagami/extra/dsee/dsee.mk)
+
 # SonyFramework
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/extra/sonyframework/system/,$(TARGET_COPY_OUT_SYSTEM)/) \
