@@ -1,0 +1,25 @@
+# Sound Enhancement
+
+# Define the context
+type audio_hweffect_device;
+
+# Don't audit the association of tmpfs filesystem with audio_hweffect_device
+dontaudit audio_hweffect_device tmpfs filesystem associate
+
+# Allow the association of tmpfs filesystem with audio_hweffect_device
+allow audio_hweffect_device tmpfs filesystem associate
+
+# Don't audit the relabel from of files from init to audio_hweffect_device
+dontaudit init audio_hweffect_device file relabelfrom
+
+# Allow the relabel from of files from init to audio_hweffect_device
+allow init audio_hweffect_device file relabelfrom
+
+# Don't audit the relabel from of directories from init to audio_hweffect_device
+dontaudit init audio_hweffect_device dir relabelfrom
+
+# Allow the relabel from of directories from init to audio_hweffect_device
+allow init audio_hweffect_device dir relabelfrom
+
+# Allow the default_android_service to find the service_manager
+allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } service_manager find -> default_android_service

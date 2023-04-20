@@ -21,6 +21,9 @@ PRODUCT_SOONG_NAMESPACES += \
 # Motorola Dolby Atmos
     $(call inherit-product, vendor/sony/extra-sagami/extra/dolby/dolby.mk)
 
+# Sony Audio Settings
+    $(call inherit-product, vendor/sony/extra-sagami/extra/sound/sound.mk)
+
 # SonyFramework
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/extra/sonyframework/system/,$(TARGET_COPY_OUT_SYSTEM)/) \
@@ -38,7 +41,3 @@ PRODUCT_PACKAGES += \
     CameraPanorama \
     CreativeEffect \
     PortraitSelfie
-
-# 360 Reality Audio
-PRODUCT_PACKAGES += \
-    360RealityAudioLite
